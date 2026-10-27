@@ -2,7 +2,7 @@
   "name": "encontrae",
   "version": "1.0.0",
   "type": "module",
-  "main": "index.ts",
+  "main": "expo-router/entry",
   "dependencies": {
     "@expo/vector-icons": "^15.0.2",
     "@react-native-async-storage/async-storage": "2.2.0",

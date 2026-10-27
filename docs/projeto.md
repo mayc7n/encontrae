@@ -12,6 +12,8 @@ Expo Router para navegação; componentes nativos, listas virtualizadas, área s
 
 ## Entrega
 
+Tema azul e branco, conforme adendo do usuário. Cor principal #165DDB; superfícies brancas e fundo azul muito claro.
+
 - Início com seleção de cidade, busca e atalhos.
 - Catálogo de serviços por categoria, detalhes, fonte e data de conferência, acesso ao site oficial, telefone e mapas quando disponíveis.
 - Vagas filtradas por cidade e modalidade, detalhes e contato. Exemplos identificados; nenhum exemplo inicia contato com terceiros.
