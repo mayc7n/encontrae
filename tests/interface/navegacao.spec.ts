@@ -23,3 +23,13 @@ test('troca de cidade persiste e exemplos não permitem candidatura', async ({ p
   await expect(page.getByText('Esta vaga é um exemplo')).toBeVisible();
   await expect(page.getByRole('button', { name: 'Conversar no WhatsApp' })).toHaveCount(0);
 });
+
+test('rascunho sobrevive à reabertura e não se apresenta como publicado', async ({ page }) => {
+  await page.goto('/anunciar');
+  await page.getByRole('textbox', { name: 'Título da oportunidade', exact: true }).fill('Auxiliar de estoque');
+  await page.getByRole('button', { name: 'Salvar rascunho neste aparelho' }).click();
+  await expect(page.getByText('Rascunho salvo neste aparelho. Ele ainda não foi publicado.')).toBeVisible();
+  await page.reload();
+  await expect(page.getByRole('textbox', { name: 'Título da oportunidade', exact: true })).toHaveValue('Auxiliar de estoque');
+  await expect(page.getByRole('button', { name: 'Enviar para análise' })).toHaveCount(0);
+});
